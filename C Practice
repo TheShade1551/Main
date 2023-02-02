@@ -1,0 +1,48 @@
+#include<stdio.h>
+int isArmstrong(int num);
+void printArmstrong(int start, int end);
+
+int main()
+{
+	int start,end;
+	printf("Enter Lower Limit to Print Armstrong numbers: ");
+	scanf("%d",&start);
+	printf("Enter Upper Limit to Print Armstrong numbers: ");
+	scanf("%d",&end);
+	
+	printf("All armstrong numbers between %d to %d are:\n",start,end);
+	printArmstrong(start,end);
+	
+	return 0;
+}
+
+int isArmstrong(int num)
+{
+	int temp,LastDigit,Sum;
+	
+	temp=num;
+	Sum=0;
+	
+	while(temp !=0)
+	{
+		LastDigit = temp%10;
+		Sum+=LastDigit*LastDigit*LastDigit;
+		temp/=10;
+	}
+	if(num==Sum)
+	return 1;
+	else
+	return 0;
+}
+
+void printArmstrong(int start,int end)
+{
+	while(start<=end)
+	{
+		if(isArmstrong(start))
+		{
+			printf("%d, ",start);
+		}
+		start++;
+	}
+}
