@@ -4,7 +4,7 @@
 
 ## Experiment 1:
 
-### 1. Area of Circle
+### 1.1 Area of Circle
 ```c
 #include<stdio.h>
 int main()
@@ -18,7 +18,7 @@ int main()
     return 0;
 }
 ```
-### 2. Gross Salary
+### 1.2 Gross Salary
 ```c
 #include<stdio.h>
 int main ()
@@ -34,7 +34,7 @@ int main ()
 	return 0;
 }
 ```
-### 3. Sum of n Natural Numbers
+### 1.3 Sum of n Natural Numbers
 ```c
 #include<stdio.h>
 int main() 
@@ -54,7 +54,7 @@ int main()
 ```
 ## Experiment 2:
 
-### 1. Arithmatic Operator
+### 2.1 Arithmatic Operator
 ```c
 #include<stdio.h>
 int main()
@@ -78,7 +78,7 @@ int main()
     return 0;
 }
 ```
-### 2. Relational, Logical & Assignment Operator
+### 2.2 Relational, Logical & Assignment Operator
 ```c
 #include<stdio.h>
 int main()
@@ -97,6 +97,77 @@ int main()
  {
  printf("Sum greater than 20");
  }
+return 0;
+}
+```
+### 2.3 Swap Variables without Temporary Variable
+```c
+#include <stdio.h>
+int main()
+{
+    int a, b;
+    printf("Enter Two Variables A & B:\n");
+    scanf("%d%d",&a,&b);
+    a = a + b;
+    b = a - b;
+    a = a - b;
+    printf("New Values of Variables A & B are\nA-%d\nB-%d",a,b);
+    return 0;
+}
+```
+## Experiment 3:
+
+### 3.1 Grade Display 
+```c
+#include<stdio.h>
+int main()
+{
+	int num;
+	printf("Enter Your Marks:");
+	scanf("%d", &num);
+	printf("You Entered %d Marks \n",num);
+	if(num>=80 && num<=100)
+	{ printf("You got A Grade \n");
+	}
+	else if(num>=60 && num<80)
+	{
+		printf("You Got B Grade \n");
+	}
+	else if(num>=40 && num<60)
+	{
+	printf("You Got C Grade \n");
+}
+else if(num<40)
+{
+	printf("Better Luck Next Time \n");
+}
+return 0;
+}
+```
+### 3.2 Quadratic Equation 
+```c
+#include<stdio.h>
+int main()
+{
+	int num;
+	printf("Enter Your Marks:");
+	scanf("%d", &num);
+	printf("You Entered %d Marks \n",num);
+	if(num>=80 && num<=100)
+	{ printf("You got A Grade \n");
+	}
+	else if(num>=60 && num<80)
+	{
+		printf("You Got B Grade \n");
+	}
+	else if(num>=40 && num<60)
+	{
+	printf("You Got C Grade \n");
+}
+else if(num<40)
+{
+	printf("Better Luck Next Time \n");
+}
 return 0;
 }
 ```
