@@ -4,7 +4,7 @@
 
 ## Experiment 1:
 
-### Area of Circle
+### 1.Area of Circle
 ```c
 #include<stdio.h>
 int main()
