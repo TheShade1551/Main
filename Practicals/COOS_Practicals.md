@@ -17,37 +17,37 @@
 
 ## Command Chart
 
-| Command | Syntax | Description |
-|---------|--------|-------------|
-| mkdir   | mkdir  | Create a new directory (pascal) in the present directory |
-| rmdir   | rmdir  | Remove the directory and all files in that directory |
-| ls      | $ ls filename | Display the list of files in the directory |
-| mv      | mv file1.txt file2.txt | Move the specified file to another directory |
-| chdir (cd) | chdir filename | Change the directory |
-| cat     | cat file1.txt file2.txt | Append the content of file.a to the end of file.b |
-| cp      | cp file.a file.b | Create a duplicate of file.a under a new file name, file.b |
-| clear   | clear  | Clear your screen |
-| kill    | Kill process_number | Kill the process specified by the Process ID Number |
-| more    | More  | Paginate the specified file so it can be read line by line (using Enter key) or screen by screen |
-| less    | Less  | Display information a screen at a time, with the ability to page back and forth |
-| head    | head filename | Display the first 10 lines of the file |
-| tail    | tail filename | Display the last 10 lines of the file |
-| man     | Man topic_number | Print the manual page on the specific topic |
-| pwd     | pwd  | Print the current working directory |
-| uname   | uname  | Print the Linux Kernel in use on your system |
-| cmp     | cmp file.a file.b | Compare 2 files of any type |
-| cut     | cut  | (Description missing) |
-| join    | join  | (Description missing) |
-| paste   | paste  | (Description missing) |
-| echo    | echo text | Print the required text |
-| free    | free  | Provide a snapshot of the system memory usage |
-| banner  | $ banner text | (Description missing) |
-| who     | who  | List currently logged-on users' username, port, and when they logged in |
-| date    | Date  | Display the Date |
-| time    | time  | Display the Time |
-| mail    | Mail  | Send and receive e-Mails |
-| cal     | Cal month_name year | Display the calendar |
-| chmod   | chmod filename=rwx file | Give Read - Write - Execute permission to everyone |
+| Command    | Syntax                  | Description                                                                                      |
+| ---------- | ----------------------- | ------------------------------------------------------------------------------------------------ |
+| mkdir      | mkdir                   | Create a new directory (pascal) in the present directory                                         |
+| rmdir      | rmdir                   | Remove the directory and all files in that directory                                             |
+| ls         | $ ls filename           | Display the list of files in the directory                                                       |
+| mv         | mv file1.txt file2.txt  | Move the specified file to another directory                                                     |
+| chdir (cd) | chdir filename          | Change the directory                                                                             |
+| cat        | cat file1.txt file2.txt | Append the content of file.a to the end of file.b                                                |
+| cp         | cp file.a file.b        | Create a duplicate of file.a under a new file name, file.b                                       |
+| clear      | clear                   | Clear your screen                                                                                |
+| kill       | Kill process_number     | Kill the process specified by the Process ID Number                                              |
+| more       | More                    | Paginate the specified file so it can be read line by line (using Enter key) or screen by screen |
+| less       | Less                    | Display information a screen at a time, with the ability to page back and forth                  |
+| head       | head filename           | Display the first 10 lines of the file                                                           |
+| tail       | tail filename           | Display the last 10 lines of the file                                                            |
+| man        | Man topic_number        | Print the manual page on the specific topic                                                      |
+| pwd        | pwd                     | Print the current working directory                                                              |
+| uname      | uname                   | Print the Linux Kernel in use on your system                                                     |
+| cmp        | cmp file.a file.b       | Compare 2 files of any type                                                                      |
+| cut        | cut                     | (Description missing)                                                                            |
+| join       | join                    | (Description missing)                                                                            |
+| paste      | paste                   | (Description missing)                                                                            |
+| echo       | echo text               | Print the required text                                                                          |
+| free       | free                    | Provide a snapshot of the system memory usage                                                    |
+| banner     | $ banner text           | (Description missing)                                                                            |
+| who        | who                     | List currently logged-on users' username, port, and when they logged in                          |
+| date       | Date                    | Display the Date                                                                                 |
+| time       | time                    | Display the Time                                                                                 |
+| mail       | Mail                    | Send and receive e-Mails                                                                         |
+| cal        | Cal month_name year     | Display the calendar                                                                             |
+| chmod      | chmod filename=rwx file | Give Read - Write - Execute permission to everyone                                               |
 
 ---
 # Experiment 2: 1's & 2's Complement of a Binary Number
@@ -131,11 +131,11 @@ int main() {
 ---
 # Experiment 3: Binary & Octal Addition
 
-| Characteristic | Binary | Octal |
-|----------------|--------|-------|
-| Base           | 2      | 8     |
-| Digits         | 0, 1   | 0-7   |
-| Carry          | Sum ≥ 2 | Sum ≥ 8 |
+| Characteristic | Binary                                        | Octal                                                     |
+| -------------- | --------------------------------------------- | --------------------------------------------------------- |
+| Base           | 2                                             | 8                                                         |
+| Digits         | 0, 1                                          | 0-7                                                       |
+| Carry          | Sum ≥ 2                                       | Sum ≥ 8                                                   |
 | Range          | Wide, requires more digits for larger numbers | More compact representation for a similar range of values |
 
 **Binary Addition**:-
@@ -284,17 +284,17 @@ Counter is essentially a register that goes through a predetermined sequence of 
 
 - There are various different kind of Flip-Flops. Some of the common flip-flops are:
 
-| Flip-Flop Type | Input Conditions | Behavior |
-|----------------|-------------------|----------|
-| RS Flip-Flop   | R = 1, S = 0     | Reset state |
-|                | R = 0, S = 1     | Set state |
-|                | R = 1, S = 1     | Avoided (undefined behavior) |
-| JK Flip-Flop   | J = 0, K = 0     | No change |
-|                | J = 1, K = 0     | Set (toggle on clock edge) |
-|                | J = 0, K = 1     | Reset (toggle on clock edge) |
-|                | J = 1, K = 1     | Toggle (from one state to the other on clock edge) |
-| D Flip-Flop    | D input is tracked | Transitions match input D |
-| T Flip-Flop    | Toggles on each clock edge | Output changes on each clock edge |
+| Flip-Flop Type | Input Conditions           | Behavior                                           |
+| -------------- | -------------------------- | -------------------------------------------------- |
+| RS Flip-Flop   | R = 1, S = 0               | Reset state                                        |
+|                | R = 0, S = 1               | Set state                                          |
+|                | R = 1, S = 1               | Avoided (undefined behavior)                       |
+| JK Flip-Flop   | J = 0, K = 0               | No change                                          |
+|                | J = 1, K = 0               | Set (toggle on clock edge)                         |
+|                | J = 0, K = 1               | Reset (toggle on clock edge)                       |
+|                | J = 1, K = 1               | Toggle (from one state to the other on clock edge) |
+| D Flip-Flop    | D input is tracked         | Transitions match input D                          |
+| T Flip-Flop    | Toggles on each clock edge | Output changes on each clock edge                  |
 
 ## Types of Registers :
 
@@ -305,21 +305,203 @@ Counter is essentially a register that goes through a predetermined sequence of 
 
 Here's the information presented in a table format:
 
-| Register Type              | Data Input Method       | Data Output Method      | Operation Description |
-|----------------------------|-------------------------|-------------------------|------------------------|
-| Serial-In Serial-Out (SISO) | Serial Input (1 bit at a time) | Serial Output (1 bit at a time) | Shifts data one bit at a time from one flip-flop to the next. |
-| Serial-In Parallel-Out (SIPO) | Serial Input (1 bit at a time) | Parallel Output (all bits simultaneously) | Data loaded serially and read out in parallel. |
-| Parallel-In Serial-Out (PISO) | Parallel Input (all bits simultaneously) | Serial Output (1 bit at a time) | Bits are entered simultaneously into their respective stages on parallel lines and read out serially. |
-| Parallel-In Parallel-Out (PIPO) | Parallel Input (all bits simultaneously) | Serial Output (1 bit at a time) | Data is loaded in parallel and shifted out serially. |
+| Register Type                   | Data Input Method                        | Data Output Method                        | Operation Description                                                                                 |
+| ------------------------------- | ---------------------------------------- | ----------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Serial-In Serial-Out (SISO)     | Serial Input (1 bit at a time)           | Serial Output (1 bit at a time)           | Shifts data one bit at a time from one flip-flop to the next.                                         |
+| Serial-In Parallel-Out (SIPO)   | Serial Input (1 bit at a time)           | Parallel Output (all bits simultaneously) | Data loaded serially and read out in parallel.                                                        |
+| Parallel-In Serial-Out (PISO)   | Parallel Input (all bits simultaneously) | Serial Output (1 bit at a time)           | Bits are entered simultaneously into their respective stages on parallel lines and read out serially. |
+| Parallel-In Parallel-Out (PIPO) | Parallel Input (all bits simultaneously) | Serial Output (1 bit at a time)           | Data is loaded in parallel and shifted out serially.                                                  |
 
-| SISO                                 | SIPO                                 |
-| ----------------------------------- | ----------------------------------- |
-| ![SISO](image.png) |![SIPO](image-1.png)  |
+| SISO               | SIPO                 |
+| ------------------ | -------------------- |
+| ![SISO](image.png) | ![SIPO](image-1.png) |
 
- PISO                                 | PIPO                                 |
-| ----------------------------------- | ----------------------------------- |
-|![PISO)](image-2.png)  |![PIPO](image-3.png) |
+ | PISO                  | PIPO                 |
+ | --------------------- | -------------------- |
+ | ![PISO)](image-2.png) | ![PIPO](image-3.png) |
 
+## Register Implemenation:
+```c
+#include <stdio.h>
+#include<stdlib.h>
+int flipFlops[4];
+
+void initializeFlipFlops() {
+    printf("Enter a 4-bit value:\n");
+    for (int i = 0; i < 4; i++) {
+        if (scanf("%d", &flipFlops[i]) != 1) {
+            printf("Invalid input. Please enter a 4-bit value.\n");
+            exit(1); // Exit the program with an error code
+        }
+        if (flipFlops[i] != 0 && flipFlops[i] != 1) {
+            printf("Invalid input. Each bit must be 0 or 1.\n");
+            exit(1); // Exit the program with an error code
+        }
+    }
+}
+
+void leftShift() {
+    // Shift the bits to the left
+    printf("After left shift, ");
+    for (int i = 3; i > 0; i--) {
+        flipFlops[i] = flipFlops[i - 1];
+    }
+    // Set the least significant bit to 0
+    flipFlops[0] = 0;
+}
+
+void rightShift() {
+    // Shift the bits to the right
+    printf("After right shift, ");
+    int temp = flipFlops[0];
+    for (int i = 0; i < 3; i++) {
+        flipFlops[i] = flipFlops[i + 1];
+    }
+    // Set the most significant bit to 0
+    flipFlops[3] = temp;
+}
+
+// Function to print the contents of the register
+void printRegister() {
+    printf("Register stores: ");
+    for (int i = 3; i >= 0; i--) {
+        printf("%d", flipFlops[i]);
+    }
+    printf("\n");
+}
+
+int main() {
+    initializeFlipFlops();
+    printRegister();
+    leftShift();
+    printRegister();
+    rightShift();
+    printRegister();
+    return 0;
+}
+```
+## Asynchronous Counter Implemenation:
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct {
+    int num_bits;
+    int* state;
+} BinaryCounter;
+
+BinaryCounter* createBinaryCounter(int num_bits) {
+    BinaryCounter* counter = (BinaryCounter*)malloc(sizeof(BinaryCounter));
+    counter->num_bits = num_bits;
+    counter->state = (int*)calloc(num_bits, sizeof(int));
+    return counter;
+}
+
+void increment(BinaryCounter* counter) {
+    int carry = 1;
+    for (int i = 0; i < counter->num_bits; i++) {
+        counter->state[i] += carry;
+        if (counter->state[i] > 1) {
+            counter->state[i] = 0;
+        } else {
+            carry = 0;
+            break;
+        }
+    }
+}
+
+void printState(BinaryCounter* counter, int cycle) {
+    printf("Cycle %d: ", cycle);
+    for (int i = counter->num_bits - 1; i >= 0; i--) {
+        printf("%d", counter->state[i]);
+    }
+    printf("\n");
+}
+
+void destroyBinaryCounter(BinaryCounter* counter) {
+    free(counter->state);
+    free(counter);
+}
+
+int main() {
+    BinaryCounter* counter = createBinaryCounter(4);
+    // Simulate counter incrementing for 10 cycles
+    for (int i = 1; i <= 10; i++) {
+        printState(counter, i);
+        increment(counter);
+    }
+
+    destroyBinaryCounter(counter);
+
+    return 0;
+}
+```
+## Synchronous Counter Implemenation:
+```c
+#include <stdio.h>
+
+int flipFlops[4];
+
+void toggleBit(int bitIndex)
+{
+  if (flipFlops[bitIndex] == 0)
+  {
+    flipFlops[bitIndex] = 1;
+  }
+  else
+  {
+    flipFlops[bitIndex] = 0;
+  }
+}
+
+void initializeFlipFlops()
+{
+  printf("Enter a 4 bit value:\n ");
+  for (int i = 0; i < 4; i++)
+  {
+    scanf("%d", &flipFlops[i]);
+  }
+}
+
+void clockFlipFlops()
+{
+  toggleBit(0); // Toggle the least significant bit
+  for (int i = 0; i < 3; i++)
+  {
+    if (flipFlops[i] == 1)
+    {
+      toggleBit(i + 1);
+    }
+  }
+}
+
+// Function to print the contents of the register
+void printRegister()
+{
+  printf("Register stores: ");
+  for (int i = 3; i >= 0; i--)
+  {
+    printf("%d", flipFlops[i]);
+  }
+  printf("\n");
+}
+
+int main()
+{
+  initializeFlipFlops();
+
+  printRegister();
+
+  for (int i = 0; i < 9; i++)
+  {
+    clockFlipFlops();
+    printf("After clock cycle %d, ", i);
+    printRegister();
+  }
+
+  return 0;
+}
+```
 ---
 # Experiment 5: CPU Scheduling Algorithm **First Come First Serve (FCFS)**
 
