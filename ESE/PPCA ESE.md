@@ -69,7 +69,7 @@
 ### This glossary summarizes key concepts related to dictionaries, sets, lists, tuples, strings, arrays, absolute value, type conversion, quotes in Python, dot product, and duplicate removal. Understanding these concepts is essential for effective Python programming.
 ---
 ## Questions: 
-# 1. How can you update the value of a key in a dictionary in Python?
+### 1. How can you update the value of a key in a dictionary in Python?
 ```python
 # Sample Dictionary
 my_dict = {"key": "old_value"}
@@ -78,7 +78,7 @@ my_dict = {"key": "old_value"}
 my_dict["key"] = "new_value"
 ```
 
-# 2. How can you create a new dictionary from two existing dictionaries in Python?
+### 2. How can you create a new dictionary from two existing dictionaries in Python?
 ```python
 # Sample Dictionaries
 dict1 = {"a": 1, "b": 2}
@@ -88,7 +88,7 @@ dict2 = {"c": 3, "d": 4}
 merged_dict = {**dict1, **dict2}
 ```
 
-# 3. How can you create a string using values from a dictionary in Python?
+### 3. How can you create a string using values from a dictionary in Python?
 ```python
 # Sample Dictionary
 my_dict = {"name": "John", "age": 30}
@@ -97,25 +97,25 @@ my_dict = {"name": "John", "age": 30}
 my_string = f"My name is {my_dict['name']} and I am {my_dict['age']} years old."
 ```
 
-# 4. How can you create a set in Python?
+### 4. How can you create a set in Python?
 ```python
 # Create a set
 my_set = {1, 2, 3}
 ```
 
-# 5. How can you add an element to a set in Python?
+### 5. How can you add an element to a set in Python?
 ```python
 # Add an element to the set
 my_set.add(4)
 ```
 
-# 6. How can you remove an element from a set in Python?
+### 6. How can you remove an element from a set in Python?
 ```python
 # Remove an element from the set
 my_set.remove(3)
 ```
 
-# 7. How can you convert a list to an array in Python?
+### 7. How can you convert a list to an array in Python?
 ```python
 # Using the array module
 from array import array
@@ -127,7 +127,7 @@ my_list = [1, 2, 3]
 my_array = array('i', my_list)
 ```
 
-# 8. Write a Python code to find the absolute value of a given number and print the result.
+### 8. Write a Python code to find the absolute value of a given number and print the result.
 ```python
 # Find the absolute value
 number = -5
@@ -135,7 +135,7 @@ absolute_value = abs(number)
 print(absolute_value)
 ```
 
-# 9. How do you convert a floating-point number to an integer in Python? Write a Python code to demonstrate the conversion and print the result.
+### 9. How do you convert a floating-point number to an integer in Python? Write a Python code to demonstrate the conversion and print the result.
 ```python
 # Convert a floating-point number to an integer
 float_number = 3.14
@@ -143,7 +143,7 @@ int_number = int(float_number)
 print(int_number)
 ```
 
-# 10. What is the difference between single and double quotes in Python? Write a Python code to demonstrate the use of single and double quotes in a string and print the result.
+### 10. What is the difference between single and double quotes in Python? Write a Python code to demonstrate the use of single and double quotes in a string and print the result.
 - Single and double quotes are interchangeable for creating strings in Python.
 
 ```python
@@ -158,7 +158,7 @@ print(single_quoted_string)
 print(double_quoted_string)
 ```
 
-# 11. Write a Python code to assign the value 10 to a variable named "x" and then change the value to 15. Print the final value of the variable.
+### 11. Write a Python code to assign the value 10 to a variable named "x" and then change the value to 15. Print the final value of the variable.
 ```python
 # Assign and update variable value
 x = 10
@@ -166,7 +166,7 @@ x = 15
 print(x)
 ```
 
-# 12. What is the difference between a tuple and a list in Python? Write a Python code to demonstrate the creation and modification of a tuple and a list and print the final results.
+### 12. What is the difference between a tuple and a list in Python? Write a Python code to demonstrate the creation and modification of a tuple and a list and print the final results.
 - Lists are mutable, while tuples are immutable.
 
 ```python
@@ -181,7 +181,7 @@ my_tuple = (1, 2, 3)
 # print(my_tuple)
 ```
 
-# 13. Write a Python code to create a dictionary named "my_dict" with three key-value pairs: "name": "John", "age": 30, and "gender": "Male". Print the value associated with the key "age".
+### 13. Write a Python code to create a dictionary named "my_dict" with three key-value pairs: "name": "John", "age": 30, and "gender": "Male". Print the value associated with the key "age".
 ```python
 # Create a dictionary
 my_dict = {"name": "John", "age": 30, "gender": "Male"}
@@ -190,7 +190,7 @@ my_dict = {"name": "John", "age": 30, "gender": "Male"}
 print(my_dict["age"])
 ```
 
-# 14. How do you copy a list in Python? Write a Python code to create a list named "my_list" with three elements: 1, 2, and 3. Copy the list to a new list named "new_list" and append the element 4 to the new list. Print the final contents of both lists.
+### 14. How do you copy a list in Python? Write a Python code to create a list named "my_list" with three elements: 1, 2, and 3. Copy the list to a new list named "new_list" and append the element 4 to the new list. Print the final contents of both lists.
 ```python
 # Copy and modify a list
 my_list = [1, 2, 3]
@@ -202,14 +202,14 @@ print(my_list)
 print(new_list)
 ```
 
-# 15. Convert the floating-point number 3.14159 to an integer in Python.
+### 15. Convert the floating-point number 3.14159 to an integer in Python.
 ```python
 # Convert a floating-point number to an integer
 float_number = 3.14159
 int_number = int(float_number)
 ```
 
-# 16. Write a Python program that takes a list of names as input and outputs the names in reverse alphabetical order.
+### 16. Write a Python program that takes a list of names as input and outputs the names in reverse alphabetical order.
 ```python
 # Reverse alphabetical order of names
 names = ["Alice", "Bob", "Charlie"]
@@ -217,7 +217,7 @@ names.sort(reverse=True)
 print(names)
 ```
 
-# 17. Given a dictionary of people's ages, write a Python program that prints the names of all the people who are over 18 years old.
+### 17. Given a dictionary of people's ages, write a Python program that prints the names of all the people who are over 18 years old.
 ```python
 # Print names of people over 18
 ages = {"Alice": 20, "Bob": 17, "Charlie": 25}
@@ -226,7 +226,7 @@ for name, age in ages.items():
         print(name)
 ```
 
-# 18. Write a Python program that takes a string as input and outputs the number of vowels in the string.
+### 18. Write a Python program that takes a string as input and outputs the number of vowels in the string.
 ```python
 # Count vowels in a string
 input_string = "Hello, World!"
@@ -234,7 +234,7 @@ vowel_count = sum(1 for char in input_string if char.lower() in 'aeiou')
 print(vowel_count)
 ```
 
-# 19. Write a Python program that takes a list of numbers as input and outputs the largest and smallest numbers in the list.
+### 19. Write a Python program that takes a list of numbers as input and outputs the largest and smallest numbers in the list.
 ```python
 # Find the largest and smallest numbers in a list
 numbers = [5, 2, 8, 1, 7]
@@ -244,7 +244,7 @@ print("Largest:", largest)
 print("Smallest:", smallest)
 ```
 
-# 20. Given two tuples of integers of the same length, write a Python program that calculates the dot product of the two tuples.
+### 20. Given two tuples of integers of the same length, write a Python program that calculates the dot product of the two tuples.
 ```python
 # Calculate dot product of two tuples
 tuple1 = (1, 2, 3)
@@ -253,7 +253,7 @@ dot_product = sum(x * y for x, y in zip(tuple1, tuple2))
 print(dot_product)
 ```
 
-# 21. Write a Python program that takes a list of integers as input and outputs a new list with the same numbers, but with any duplicates removed.
+### 21. Write a Python program that takes a list of integers as input and outputs a new list with the same numbers, but with any duplicates removed.
 ```python
 # Remove duplicates from a list
 input_list = [1, 2, 2, 3, 4, 4, 5]
