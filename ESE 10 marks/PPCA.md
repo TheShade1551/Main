@@ -327,8 +327,7 @@ In this program:
 - The `except ValueError` block catches the case where the user inputs a non-numeric value.
 - The `except NegativeInputError` block catches the custom exception for negative input.
 - The `except Exception` block serves as a general catch-all for other unexpected errors.
-
-This design ensures that the program gracefully handles errors and provides informative error messages to the user.
+- This design ensures that the program gracefully handles errors and provides informative error messages to the use
 ---
 ### 7. Write a Python program that prompts the user to input a number and handles a KeyboardInterrupt exception if the user cancels the input.
 
@@ -356,8 +355,7 @@ In this program:
 - The `except KeyboardInterrupt` block catches the `KeyboardInterrupt` exception, which is raised when the user cancels the input (e.g., by pressing `Ctrl+C`).
 - The `except ValueError` block catches the case where the user inputs a non-numeric value.
 - The `except Exception` block serves as a general catch-all for other unexpected errors.
-
-This design ensures that the program handles a keyboard interrupt gracefully and provides appropriate error messages for other potential issues.
+- This design ensures that the program handles a keyboard interrupt gracefully and provides appropriate error messages for other potential issues.
 ---
 # Module 5
 
@@ -384,7 +382,7 @@ def count_occurrences(file_path):
 # Example usage
 count_occurrences("notes.txt")
 ```
-Make sure to replace "notes.txt" with the actual path to your file. The function `count_occurrences` reads the file, converts its content to lowercase for a case-insensitive search, and then counts the occurrences of the word "the". It handles potential file not found errors and other exceptions gracefully.
+- Make sure to replace "notes.txt" with the actual path to your file. The function `count_occurrences` reads the file, converts its content to lowercase for a case-insensitive search, and then counts the occurrences of the word "the". It handles potential file not found errors and other exceptions gracefully.
 ---
 ### 2. A text file named "matter.txt" contains some text, which needs to be displayed such that every next character is separated by a symbol "#". Write a function definition for hash_display() in Python that would display the entire content of the file matter.txt in the desired format.
 ```
