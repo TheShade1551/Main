@@ -1,4 +1,4 @@
-# Module 1: Data Representation
+# Module 1: **Data Representation**
 
 ## 2 Marks:
 
@@ -340,7 +340,7 @@ Here's the information presented in a table format:
 
 ---
 
-# Module 2: Computer Organization And Design
+# Module 2: **Computer Organization And Design**
 
 ## 2 Marks:
 
@@ -1193,4 +1193,454 @@ Despite enhancements like increased cache, RAM, or faster components, Von Neuman
 
 **Significance:**
 Von-Neumann architecture, with its foundational principles, has played a crucial role in shaping the architecture of modern computers, from personal computers to supercomputers.
+
 ---
+
+# Module 3: **Peripheral Devices and parallel Processing**
+
+## 2 Marks:
+
+### 1. Pipelining Process
+- **Definition:** Pipelining is a technique that divides a sequential process into smaller sub-operations, allowing simultaneous execution in dedicated segments.
+- **Flow of Information:** The process involves passing the output of one segment to the next, creating a flow of binary information through multiple processing segments.
+- **Parallel Processing:** Pipelining operates in parallel, with each segment working simultaneously on distinct data, enhancing overall efficiency.
+- **Temporal Overlapping:** The term "pipeline" signifies temporal overlapping of processing, and registers are used to isolate and synchronize each segment.
+- **Optimized Execution:** Pipelining results in optimized execution by allowing continuous processing of instructions, improving throughput in computer architectures.
+
+### 2. Serial Communication in Computer Organisation
+- **Definition:** Serial communication is a method of transferring data where bits are sent sequentially, one after another, over a single communication channel.
+- **Single Path:** Unlike parallel communication, which uses multiple paths for different bits simultaneously, serial communication uses a single path to transmit bits sequentially.
+- **Efficiency:** Serial communication is often more efficient in terms of using fewer wires and components, making it suitable for various applications.
+- **Synchronization:** Synchronization between the sender and receiver is crucial in serial communication to ensure accurate and timely reception of data.
+- **Common Examples:** Common examples of serial communication include RS-232, USB, and UART (Universal Asynchronous Receiver-Transmitter) interfaces.
+
+### 3. Parallel Communication in Computer Organisation
+- **Definition:** Parallel communication is a method of transferring data where multiple bits are sent simultaneously over multiple communication channels or paths.
+- **Multiple Paths:** Unlike serial communication, which uses a single path for sequential bit transmission, parallel communication employs multiple paths to transmit multiple bits concurrently.
+- **High Bandwidth:** Parallel communication can achieve higher data transfer rates compared to serial communication because it processes multiple bits at the same time.
+- **Complexity:** Implementing parallel communication may involve more complex hardware and additional wires, especially as the number of parallel channels increases.
+- **Common Examples:** Parallel communication is commonly used in systems like parallel buses within computers, where data is sent across multiple wires simultaneously to increase throughput.
+
+![Alt text](image-25.png)
+
+### 4. Differntiate Between Syncronous Transmission & Asynchronous Transmission
+![Alt text](image-26.png)
+
+### 5. Memory Read & Write Operation.
+Memory Address Register (MAR) and Memory Data Register (MDR) are essential components of a computer's memory operations, specifically in memory read and write operations.
+
+**Memory Read Operation:**
+- **MAR Content:** Initially, MAR holds the memory address (e.g., 2003) where the read operation will occur.
+- **MDR Initialization:** MDR may contain any existing data.
+- **Read Activation:** Upon executing the read instruction, the data from the specified memory location (e.g., 2003) is transferred to MDR.
+- **MDR Update:** MDR is updated with the value retrieved from the memory location (e.g., 3D).
+![Alt text](image-27.png)
+
+**Memory Write Operation:**
+- **MAR Content:** MAR contains the memory address (e.g., 2003) where the write operation will take place.
+- **MDR Content:** MDR holds the data to be written into the memory (e.g., 3D).
+- **Write Activation:** Executing the write instruction triggers the transfer of the address to the address lines and data bits to the data input lines. The write control line is then activated.
+- **Data Storage:** The content of MDR (e.g., 3D) is written into the specified memory location (e.g., 2003).
+![Alt text](image-28.png)
+These operations demonstrate the crucial role of MAR in specifying the memory location for read and write actions, while MDR serves as the register for holding data during these operations.
+
+---
+## 5 Marks:
+
+### 1. Differtiate between Primary Memory & Secondary Memory
+
+- **Primary/Main Memory:**
+  - Directly accessible by CPU.
+  - Comprised of DRAM.
+  - Provides actual working space to the processor.
+  - Holds data and instructions currently being processed.
+
+- **Secondary Memory/Mass Storage:**
+  - Processor doesn't directly interact with it.
+  - Contents transferred to primary memory for processor access.
+  - Examples include hard drives, SSDs, etc.
+
+| **Primary Memory**                              | **Secondary Memory**                                 |
+| ----------------------------------------------- | ---------------------------------------------------- |
+| Primary memory is temporary.                    | Secondary memory is permanent.                       |
+| Directly accessible by Processor/CPU.           | Not directly accessible by the CPU.                  |
+| Nature of Parts varies (RAM-volatile, ROM-non-volatile). | Always non-volatile.                                 |
+| More expensive than secondary storage devices.  | Less expensive compared to primary memory devices.   |
+| Devices are semiconductor memories.             | Devices are magnetic and optical memories.           |
+| Also known as Main memory or Internal memory.   | Also known as External memory or Auxiliary memory.   |
+| Examples: RAM, ROM, Cache memory, PROM, EPROM, Registers, etc. | Examples: Hard Disk, Floppy Disk, Magnetic Tapes, etc. |
+
+### 2. Explain MultiProcessing.
+
+**Multiprocessing Operating System:**
+- A computer system with two or more CPUs sharing common RAM.
+- Main objectives: boost execution speed, fault tolerance, application matching.
+- Two types: shared memory multiprocessor, distributed memory multiprocessor.
+
+**Applications of Multiprocessor:**
+1. **Single Instruction, Single Data Stream (SISD):**
+   - Used as a uniprocessor.
+2. **Single Instruction, Multiple Data Stream (SIMD):**
+   - Commonly employed for vector processing in multiprocessors.
+3. **Multiple Instruction, Single Data Stream (MISD):**
+   - Describes hyper-threading or pipelined processors.
+4. **Multiple Instruction, Multiple Data Stream (MIMD):**
+   - Executes multiple, individual series of instructions in multiple perspectives.
+
+**Benefits of Multiprocessor:**
+- **Enhanced Performance:**
+  - Utilizes multiple CPUs for parallel processing.
+- **Multiple Applications:**
+  - Handles different tasks simultaneously.
+- **Multi-tasking Inside an Application:**
+  - Supports concurrent processing within a single application.
+- **High Throughput and Responsiveness:**
+  - Improves data processing speed and system responsiveness.
+- **Hardware Sharing Among CPUs:**
+  - Efficient utilization of resources through shared memory.
+
+| **Advantages of Multicomputer Systems** | **Disadvantages of Multicomputer Systems** |
+|----------------------------------------|--------------------------------------------|
+| 1. Improved Performance               | 1. Increased Complexity                   |
+| 2. Better Scalability                 | 2. Higher Power Consumption               |
+| 3. Increased Reliability              | 3. Difficult Programming                 |
+| 4. Reduced Cost                       | 4. Synchronization Issues                |
+| 5. Enhanced Parallelism               | 5. Network Latency                       |
+
+--- 
+### 3. Memory Hierarchy
+
+- Memory Hierarchy is an enhancement to organize the memory such that it can minimize the access time.
+- The Memory Hierarchy was developed based on a program behavior known as locality of references.
+- The figure below clearly demonstrates the different levels of the memory hierarchy.
+- Memory Hierarchy optimizes computer memory by incorporating multiple levels with varying sizes, costs, and access speeds.
+
+![Alt text](image-29.png)
+
+**Memory Hierarchy Design:**
+
+1. **Registers:**
+   - Small, high-speed memory units in the CPU.
+   - Store frequently used data and instructions.
+   - Fastest access time, limited storage capacity (typically 16 to 64 bits).
+
+2. **Cache Memory:**
+   - Small, fast memory unit close to the CPU.
+   - Stores recently accessed, frequently used data and instructions from the main memory.
+   - Designed to minimize data access time, providing quick access for the CPU.
+
+3. **Main Memory (RAM):**
+   - Primary memory with larger storage capacity than cache memory.
+   - Slower access time compared to cache.
+   - Stores data and instructions currently in use by the CPU.
+
+   Types of Main Memory:
+   - *Static RAM (SRAM):* Stores binary information in flip flops, faster access time, used in implementing cache memory.
+   - *Dynamic RAM (DRAM):* Stores binary information as a charge on capacitors, requires refreshing circuitry, higher memory density compared to SRAM.
+
+4. **Secondary Storage:**
+   - Non-volatile memory with larger capacity than main memory.
+   - Stores data and instructions not currently in use by the CPU.
+   - Slower access time, typically the least expensive in the memory hierarchy.
+
+5. **Magnetic Disk:**
+   - Circular plates made of metal, plastic, or magnetized material.
+   - Works at high speed, frequently used for data storage.
+
+6. **Magnetic Tape:**
+   - Magnetic recording device covered with a plastic film.
+   - Used for data backup.
+   - Slower access time, requires time for accessing the strip.
+
+**Characteristics of Memory Hierarchy**
+- 1. Capacity: Increases as we move down the hierarchy.
+- 2. Access Time: Increases as we move down the hierarchy.
+- 3. Performance: Memory Hierarchy minimizes the gap in access time, enhancing system performance.
+- 4. Cost Per Bit: Increases from top to bottom in the hierarchy, with internal memory being costlier than external memory.
+
+**Advantages of Memory Hierarchy**
+- 1. Memory Management: Efficiently manages and organizes memory.
+- 2. Data Distribution: Spreads data across the computer system.
+- 3. Cost and Time Saving: Saves consumer costs and time.
+
+---
+### 4. Explain Parallel Processing.
+- **Definition:** Parallel processing is a computing technique aimed at enhancing computational speed by executing simultaneous data-processing operations.
+  
+- **Concurrency:** It enables concurrent data processing, allowing for faster execution times by utilizing multiple processing units, such as Arithmetic Logic Units (ALUs).
+
+- **Simultaneous Instruction Execution:** The system can read the next instruction from memory while simultaneously executing an instruction in the ALU, optimizing processing efficiency.
+
+- **Complexity Levels:** Parallel processing involves multiple levels of complexity, from the use of parallel registers working simultaneously with all bits of a word to the deployment of multiple functional units performing separate or similar operations concurrently.
+
+- **Resource Utilization:** The main advantage lies in better utilization of system resources through increased resource multiplicity, ultimately enhancing overall system throughput.
+
+- **Functional Units:** Practical implementations involve dividing the execution unit into multiple functional units operating in parallel, covering arithmetic operations, logic operations, shifts, and increments.
+
+- **Independent Operation:** Each functional unit operates independently, allowing for the simultaneous execution of diverse operations, contributing to overall processing speed.
+
+- **Historical Challenge:** While historically the cost of implementing parallel processing systems posed a challenge, technological advancements have made them economically viable in modern computing scenarios.
+
+- One possible method of dividing the execution unit into eight functional units operating in parallel is shown in figure. Depending on the operation specified by the instruction, operands in the registers are transferred to one of the units, associated with the operands. In each functional unit, the operation performed is denoted in each block of the diagram. 
+
+![Alt text](image-30.png)
+
+---
+### 5. Explain Pipeline Processing
+- **Pipelining Overview:**
+  - Technique involves breaking down a sequential process into sub-operations.
+  - Allows concurrent execution of multiple computations.
+
+- **Key Characteristics:**
+  - Simultaneous execution facilitated by dedicated registers for each segment.
+  - Provides isolation, enabling parallel processing.
+
+- **Pipeline Structure:**
+  - Typically represented with input registers for each segment and combinational circuits.
+  - Example: Combined multiplication and addition operations decomposed into sub-operations.
+
+- **Example of Combined Operation:**
+  - Operations performed in each segment of the pipeline:
+    - Input Operation (R1, R2): Ai and Bi input.
+    - Multiplication and Input (R3, R4): Multiply R1 and R2 (R3), input Ci into R4.
+    - Addition Operation (R5): Add R3 and R4 to get the final result.
+
+![Alt text](image-31.png)
+
+- **Application Areas:**
+  - **Arithmetic Pipeline:**
+    - Accelerates arithmetic operations by breaking them into sequential stages.
+  - **Instruction Pipeline:**
+    - Enhances the speed of instruction execution by optimizing processing.
+
+- **Continuous Data Flow:**
+  - Output from one segment serves as the input for the next, creating a continuous flow.
+  - Block diagram illustrates the sequential flow of data through registers and combinational circuits.
+
+- **Benefits of Pipelining:**
+  - Optimizes processing efficiency.
+  - Enables parallel execution, improving throughput in computer systems.
+---
+
+### 6. Explain Pipeline Hazards
+
+- **Introduction to Hazards in Pipelined Design:**
+  - CPU speed is limited by memory, and dependencies among instructions in a pipeline can reduce its pace.
+  - Dependencies and hazards are interchangeably used terms in computer architecture, posing a risk to execution.
+
+- **Types of Pipeline Hazards:**
+  1. **Structural Hazard:**
+     - Arises from conflicts among hardware resources, such as memory, GPR registers, or ALU.
+     - Occurs when multiple instructions in the pipeline require access to the same resource simultaneously.
+     - Results in a resource conflict, limiting the hardware's ability to handle all combinations.
+
+  2. **Data Hazard:**
+     - Emerges when the execution of one instruction depends on the results of another still in the pipeline.
+     - Classified into three groups based on the order of READ or WRITE operations on registers.
+     - Represents a dependency on data flow between instructions being processed in the pipeline.
+
+  3. **Control Hazard:**
+     - Caused by branch instructions, known as branch hazards.
+     - Branch instructions control the flow of program execution, particularly in conditional statements.
+     - Conditional hazards arise when the decision to execute one instruction depends on the result of another, such as a conditional branch.
+
+- **Addressing Dependencies:**
+  - One approach is introducing a "bubble" into the pipeline, causing a stall and limiting throughput.
+  - The bubble forces the next instruction to wait until the preceding one is completed.
+
+- **Further Exploration of Hazards:**
+  - Detailed understanding of structural, data, and control hazards is essential for effective pipelined design.
+  - Each type of hazard presents challenges in maintaining the smooth flow of instructions through the pipeline.
+
+---
+### 7. Data Transfer
+**Two Types of Data Transfer: Asynchronous and Synchronous**
+
+1. **Asynchronous Data Transfer:**
+   - *Definition:* Asynchronous I/O synchronization manages data transfer between the CPU and external devices without fixed timing or synchronization.
+   - *Characteristic:* Data transfer occurs at an unpredictable rate, suitable for variable or unpredictable situations.
+   - *Use Cases:* Commonly used in serial communication or with slow devices where fixed synchronization may lead to resource waste.
+   - *Synchronization Method:* Utilizes interrupt-driven I/O where the CPU waits for an interrupt signal from the device to initiate data transfer.
+   - *Challenge:* Ensuring the freshness of data on the data bus without predefined time slots for sending or receiving.
+   - ![Alt text](image-32.png)
+
+2. **Synchronous Data Transfer:**
+   - *Definition:* Synchronous data transfer involves sending and receiving units enabled with the same clock signal.
+   - *Characteristics:* The sending and receiving units are synchronized with a common clock signal, allowing coordinated data transfer.
+   - *Implementation:* Suitable when both units know each other's behavior, and the master initiates a sequence of instructions synchronized with the common clock.
+   - *Master-Slave Interaction:* The master introduces sufficient delay to accommodate the slower response of the slave, and no explicit acknowledgment signals are exchanged.
+   - *Selection Process:* Before data transfer, the master logically selects the slave by sending the address or a "device select" signal.
+   - *Timing Diagram Example:* Illustrates the timing diagram for a synchronous read operation, showcasing the master placing the slave's address and completing the read operation in one clock period.
+   - ![Alt text](image-33.png)
+
+**Conclusion:**
+Asynchronous and synchronous data transfer methods offer distinct approaches to managing data flow between the CPU and external devices, each suited to specific scenarios based on the predictability of data transfer rates and the need for synchronization.
+---
+
+## 10 Marks:
+
+### 1. Vector & General Interrupts
+**Interrupts in Computer Systems**
+
+1. **Definition:**
+   - *Signal:* An interrupt is a signal, whether emitted by hardware or software, indicating an event that requires immediate attention and interrupts the current process.
+   - *Purpose:* Alerts the processor to high-priority processes, leading to the initiation of an Interrupt Service Routine (ISR).
+
+2. **Handling Interrupts:**
+   - *Processor Response:* Upon receiving an interrupt, the processor completes the current instruction, saves the address of the interrupted instruction, and loads the Program Counter (PC) with the ISR's address.
+   - *Interrupt Latency:* The time delay between receiving an interrupt and the start of ISR execution, influenced by register saving and acknowledgment signaling.
+
+3. **Vectored Interrupts:**
+   - *Definition:* Devices using vectored interrupts are assigned an interrupt vector, a specific number identifying a particular interrupt handler.
+   - *ISR Address:* The ISR address is fixed and known to the CPU, allowing direct branching to the specific ISR when the device interrupts.
+   - *Microprocessor Action:* Upon interrupt, the microprocessor jumps directly to the designated service routine.
+   - *Call Instruction:* When executing the call instruction, the microprocessor saves the address of the next instruction on the stack.
+   - *Return from ISR:* The RET instruction at the end of the service routine returns execution to the interrupted program.
+   - *Example:* All 8051 interrupts utilize vectored interrupt mechanisms.
+
+4. **Non-Vectored Interrupts:**
+   - *Definition:* Non-vectored interrupts have a common ISR shared among all non-vectored interrupts in the system.
+   - *ISR Address:* The address of the common ISR is known to the CPU, and it is common for all non-vectored interrupts.
+   - *Memory Location:* These interrupts lack a fixed memory location for transferring control from normal execution.
+   - *Interrupt Handling:* Upon interrupt, the address of the memory is sent along with the interrupt, and the CPU must determine which device caused the interrupt.
+   - *Polling Requirement:* Without direct vectoring, the CPU may need to poll each I/O interface to identify the interrupting device.
+   - *Identification Challenge:* Determining the specific device causing the interrupt requires additional steps.
+
+**Conclusion:**
+Vectored interrupts provide a direct and efficient way of handling interrupts, with fixed ISR addresses for each device. In contrast, non-vectored interrupts share a common ISR, and the CPU needs additional information, such as memory addresses, to identify the source of the interrupt. The choice between vectored and non-vectored interrupts depends on the system's requirements and design considerations.
+
+---
+### 2. Explain Non-Pipeling System. Explain RISC and CISC in Computer Organization
+**Non-Pipelining System:**
+- Processes like decoding, fetching, execution, and writing to memory are merged into a single unit or a single step.
+- Only one instruction is executed at the same time.
+- The CPU scheduler chooses the instruction from the pool of waiting instructions when an execution unit gives a signal that it is free. The efficiency is not dependent on the CPU scheduler.
+- Execution in a non-pipelining system takes more time or more cycles comparatively.
+
+**Reduced Instruction Set Architecture (RISC):**
+- Simplifies hardware by using a few basic instructions for loading, evaluating, and storing operations.
+- **Characteristics:**
+  - Simpler instructions for easier decoding.
+  - Single-word size instructions.
+  - Single-clock cycle execution.
+  - More general-purpose registers.
+  - Simple addressing modes.
+  - Fewer data types.
+  - Supports pipelining.
+- **Advantages:**
+  - Simpler instructions result in faster processing times.
+  - Faster execution due to a simpler instruction set.
+  - Lower power consumption, making them suitable for portable devices.
+- **Disadvantages:**
+  - Requires more instructions for complex tasks.
+  - Increased memory usage for additional instructions.
+  - Higher development and manufacturing costs.
+
+**Complex Instruction Set Architecture (CISC):**
+- Performs all loading, evaluating, and storing operations in a single instruction.
+- **Characteristics:**
+  - Complex instructions for complex tasks.
+  - Instructions larger than one-word size.
+  - May take more than a single clock cycle for execution.
+  - Fewer general-purpose registers.
+  - Complex addressing modes.
+  - More data types.
+- **Advantages:**
+  - Reduced code size due to complex instructions performing multiple operations.
+  - More memory-efficient code for complex tasks.
+  - Widely used with a larger user base and available software.
+- **Disadvantages:**
+  - Slower execution due to complex instructions.
+  - More complex design, making them harder to manufacture.
+  - Higher power consumption compared to RISC processors.
+  
+**RISC vs. CISC:**
+
+| **Aspect** | **RISC** | **CISC** |
+|------------|----------|----------|
+| Focus      | Software | Hardware |
+| Control Unit | Hardwired | Hardwired and Microprogrammed |
+| Transistors | Used for more registers | Used for storing complex instructions |
+| Instruction Size | Fixed-sized | Variable-sized |
+| Operation Types | Register to Register Arithmetic only | Register to Register, Register to Memory, Memory to Memory |
+| Register Usage | Requires more registers | Requires less registers |
+| Code Size | Large | Small |
+| Clock Cycle | Single clock cycle per instruction | More than one clock cycle per instruction |
+| Word Size | Fits in one word | Larger than one word |
+| Addressing Modes | Simple and limited | Complex and more |
+| Acronym | Reduced Instruction Set Cycle | Complex Instruction Set Cycle |
+| Number of Instructions | Less compared to CISC | More compared to RISC |
+| Power Consumption | Low | More/High |
+| Pipelining | Highly pipelined | Less pipelined |
+| RAM Requirement | Requires more RAM | Requires less RAM |
+| Addressing Modes | Less | More |
+
+---
+### 3. Input-Output Device Interfacing
+
+**Input-Output Interface in Computer Systems:**
+
+- **Definition:** The Input-Output (I/O) Interface is a crucial method for transferring information between internal storage devices (memory) and external peripheral devices.
+  
+- **Peripheral Devices:** These devices collectively known as input-output devices provide input and output for the computer.
+
+- **Examples:** 
+  - Input Devices: Keyboards and mice.
+  - Output Devices: Monitors and printers.
+  - Some peripherals, like external hard drives, can provide both input and output.
+
+![Alt text](image-34.png)
+
+**Major Differences:**
+1. **Nature of Devices:**
+   - Peripheral devices: Electromagnetic and electro-mechanical.
+   - CPU: Electronic.
+2. **Mode of Operation:**
+   - Significant differences in the mode of operation between peripheral devices and the CPU.
+3. **Synchronization:**
+   - Essential synchronization mechanism due to slower data transfer rates of peripheral devices compared to the CPU.
+4. **Data Format:**
+   - Data codes and formats in peripheral devices may differ from those in the CPU and memory.
+5. **Operating Modes:**
+   - Different operating modes for each peripheral device to avoid disturbing the operation of others.
+
+**Block Diagram of Input-Output Interface Unit:**
+
+![Alt text](image-35.png)
+
+1. **Data Bus Buffer:**
+   - Bi-directional data bus for CPU communication.
+   - Transfers control word data and status info to/from the CPU.
+2. **Port A and Port B:**
+   - Facilitates data transfer between Input-Output devices and Interface Unit.
+   - Includes bi-directional data input/output buffers.
+   - Connects directly with various input/output devices.
+3. **Control and Status Register:**
+   - Receives CPU control information based on control word data.
+   - Manages input/output operations.
+   - Checks status conditions, indicating data register and Port A/B statuses.
+   - Records errors during data transfer.
+4. **Read/Write Control Logic:**
+   - Generates control signals for device operations.
+   - Accepts CPU commands.
+   - Transfers interface unit status to the data bus.
+   - Accepts Chip Select (CS), read, and write control signals from the system bus.
+   - Determines data transfer direction based on read and write signals.
+
+**Functions of Input-Output Interface:**
+1. **Synchronization:**
+   - Aligns the operating speed of the CPU with respect to input-output devices.
+2. **Device Selection:**
+   - Chooses the appropriate input-output device for interpretation.
+3. **Signal Provision:**
+   - Provides signals such as control and timing signals.
+4. **Data Buffering:**
+   - Enables data buffering through the data bus.
+5. **Error Detection:**
+   - Incorporates various error detectors.
+6. **Data Conversion:**
+   - Converts serial data into parallel data and vice versa.
+7. **Digital-to-Analog Conversion:**
+   - Converts digital data into analog signals and vice versa.
+
+The Input-Output Interface requires additional hardware to manage and synchronize all input and output devices, resolving differences between the CPU and peripheral devices. This ensures effective communication and coordination in a computer system.
