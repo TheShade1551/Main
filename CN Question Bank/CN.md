@@ -528,15 +528,15 @@ Overall, the Data Link Layer plays a critical role in ensuring reliable and effi
 
 Let's first create a table to compare and contrast the two sublayers of the Data Link Layer: LLC (Logical Link Control) and MAC (Media Access Control).
 
-| Aspect                      | LLC (Logical Link Control)                                                         | MAC (Media Access Control)                                                        |
-|-----------------------------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
-| Definition                  | Provides services independent of the physical medium, such as error detection.    | Manages access to the physical medium and addresses devices via MAC addresses.     |
-| Addressing                  | Uses logical addressing, typically in the form of network layer addresses.        | Uses physical addressing, assigning unique MAC addresses to devices.               |
-| Error Detection             | Performs error detection and correction, often through frame check sequences.     | Typically does not handle error detection, but relies on higher layers or PHY.     |
-| Flow Control                | Can implement flow control mechanisms, regulating data flow between devices.      | Usually does not handle flow control directly, though some protocols may include it.|
-| Protocol Examples           | IEEE 802.2 (Ethernet II), HDLC, PPP.                                              | IEEE 802.3 (Ethernet), Wi-Fi (IEEE 802.11), Token Ring.                          |
+| Aspect            | LLC (Logical Link Control)                                                     | MAC (Media Access Control)                                                           |
+| ----------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| Definition        | Provides services independent of the physical medium, such as error detection. | Manages access to the physical medium and addresses devices via MAC addresses.       |
+| Addressing        | Uses logical addressing, typically in the form of network layer addresses.     | Uses physical addressing, assigning unique MAC addresses to devices.                 |
+| Error Detection   | Performs error detection and correction, often through frame check sequences.  | Typically does not handle error detection, but relies on higher layers or PHY.       |
+| Flow Control      | Can implement flow control mechanisms, regulating data flow between devices.   | Usually does not handle flow control directly, though some protocols may include it. |
+| Protocol Examples | IEEE 802.2 (Ethernet II), HDLC, PPP.                                           | IEEE 802.3 (Ethernet), Wi-Fi (IEEE 802.11), Token Ring.                              |
 
-### Example Protocols:
+**Example Protocols:**
 
 1. **LLC (Logical Link Control)**:
 
@@ -555,4 +555,283 @@ Let's first create a table to compare and contrast the two sublayers of the Data
    - **Token Ring**: Token Ring is a LAN technology where devices access the network medium sequentially, passing a special token to gain permission to transmit data. It uses MAC addresses for device identification and frame prioritization.
 
 ---
+## Module 3: Transport Layer
 
+### **2 Marks:**
+
+### 1. Define the term "protocol" in the context of the Application Layer.
+- **Application Layer Protocols:**
+  - Define rules and conventions for communication between software applications.
+  - Govern format, timing, sequencing, and error control mechanisms for data transmission over a network.
+  - Enable effective exchange of information between different applications.
+  - Examples include:
+    - **HTTP (Hypertext Transfer Protocol):** Used for web browsing.
+    - **SMTP (Simple Mail Transfer Protocol):** Facilitates email transmission.
+    - **FTP (File Transfer Protocol):** Enables file sharing.
+
+---
+### 2. Define the term "segmentation" in the context of the Transport Layer.
+- **Transport Layer Segmentation:**
+  - Divides large data units (messages or datagrams) into smaller segments or packets for transmission.
+  - Enables efficient and reliable data transmission by overcoming network congestion, varying transmission speeds, and data integrity concerns.
+  - Facilitates flow control and error detection and correction mechanisms at the Transport Layer.
+  - Examples include:
+    - **TCP (Transmission Control Protocol):** Ensures reliable, ordered, and error-checked delivery of data packets.
+    - **SCTP (Stream Control Transmission Protocol):** Supports multiple streams of data and offers features like message boundaries and multi-homing.
+![alt text](image-8.png)
+
+---
+### 3. Explain the role of flow control in the Transport Layer.
+- In the Transport Layer, flow control plays a crucial role in managing the rate of data transmission between the sender and receiver to ensure that the sender does not overwhelm the receiver with data that it cannot process. Flow control mechanisms prevent congestion and buffer overflow issues, which could lead to packet loss or degradation of network performance.
+**Objectives of Flow Control in the Transport Layer:**
+  1. **Preventing Congestion:**
+     - Regulates data transmission rate to avoid overwhelming intermediate devices or the receiver, maintaining optimal network performance.
+  2. **Buffer Management:**
+     - Ensures receiver has sufficient buffer space to store incoming data, preventing buffer overflow and data loss.
+  3. **Optimizing Transmission Speed:**
+     - Allows sender to adjust transmission rate based on receiver's processing ability, enhancing network efficiency.
+  4. **Error Recovery:**
+     - Works with error detection and recovery mechanisms to minimize impact of transmission errors, ensuring reliable data delivery.
+
+![alt text](image-10.png)
+---
+### 4. What is the role of the Transport Layer in multiplexing and demultiplexing?
+- **Multiplexing and Demultiplexing in the Transport Layer:**
+  1. **Multiplexing:**
+     - Combines multiple data streams from different applications into a single stream for transmission over the network.
+     - Achieved using port numbers to distinguish between communication channels.
+     - Enables efficient utilization of network resources by consolidating multiple channels into a single connection.
+
+![alt text](image-11.png)
+
+  2. **Demultiplexing:**
+     - Separates incoming data streams by examining destination port numbers.
+     - Directs each segment to the appropriate application based on its destination port number.
+     - Ensures each application receives its intended data, maintaining integrity and functionality.
+
+![alt text](image-12.png)
+
+The Transport Layer's multiplexing and demultiplexing functionalities enable efficient and reliable communication between networked applications by consolidating and accurately routing data streams over the network.
+
+---
+### 5. What is the role of HTTP (Hypertext Transfer Protocol) in the Application Layer?
+- **Key Aspects of HTTP in the Application Layer:**
+  1. **Client-Server Communication:**
+     - Establishes a client-server model for communication between web browsers (clients) and web servers.
+  2. **Request-Response Protocol:**
+     - Operates as a request-response protocol, with clients sending requests and servers responding with requested resources.
+  3. **Stateless Protocol:**
+     - Inherently stateless, each request-response cycle is independent, requiring additional mechanisms for maintaining stateful behavior.
+  4. **Text-Based Protocol:**
+     - Messages are human-readable and composed of ASCII or Unicode characters, facilitating debugging and comprehension.
+  5. **Support for Hypertext:**
+     - Initially designed for transferring hypertext documents (web pages) and evolved to support various media and data formats.
+  6. **Support for Methods:**
+     - Defines methods (e.g., GET, POST, PUT, DELETE) for clients to interact with servers, each serving specific purposes.
+
+HTTP's role in the Application Layer is to facilitate standardized communication between clients and servers, enabling efficient retrieval and transmission of web resources across the Internet.
+
+---
+### 6. Differentiate between a web browser and a web server in the context of the Application Layer.
+| Aspect         | Web Browser                                                                      | Web Server                                                                                                     |
+| -------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Definition     | A client-side software application for viewing web content                       | A server-side software application or hardware device for storing and delivering web content                   |
+| Functionality  | Retrieves, renders, and displays web content to users                            | Listens for incoming HTTP requests, retrieves requested resources, and sends HTTP responses containing content |
+| User Interface | Provides a graphical interface for users to navigate the web and access features | Typically does not have a graphical user interface, operates in the background                                 |
+| Hosting        | Does not host websites, primarily used for accessing web content                 | Hosts websites, web applications, and other web services, making them accessible to users                      |
+| Examples       | Google Chrome, Mozilla Firefox, Microsoft Edge, Safari, Opera                    | Apache HTTP Server, Nginx, Microsoft Internet Information Services (IIS), LiteSpeed Web Server                 |
+
+---
+### 7. Explain the role of the client in the client-server model of communication at the Application Layer.
+- **Role of the Client in the Client-Server Model:**
+  1. **Initiating Communication:**
+     - Sends requests to servers to request services or resources.
+  2. **Sending Requests:**
+     - Generates and sends requests using application-layer protocols like HTTP, FTP, SMTP, or DNS.
+  3. **Receiving Responses:**
+     - Waits for and receives responses from servers containing requested information or action outcomes.
+  4. **Interpreting Responses:**
+     - Interprets received responses, taking appropriate actions like rendering web content in a browser.
+  5. **Handling User Interaction:**
+     - Provides user interface elements for user interaction, such as forms, buttons, and controls.
+  6. **State Management:**
+     - Manages application state, including user sessions, preferences, and temporary data.
+  7. **Error Handling:**
+     - Deals with errors or unexpected responses, providing feedback to users and taking corrective actions.
+
+![alt text](image-13.png)
+
+The client's role involves facilitating communication with servers, managing user interactions, maintaining application state, and handling errors to ensure efficient and effective interaction with server resources.
+
+--- 
+
+### **5 Marks:**
+
+### 1. Elaborate what is the primary function of the Application Layer in the OSI model?
+The Application Layer is the topmost layer in the OSI (Open Systems Interconnection) model, representing Layer 7. It serves as the interface between the user and the network, enabling communication between software applications and the network infrastructure. The Application Layer is responsible for providing network services directly to end-users and applications, abstracting the complexities of lower-level protocols and network communication.
+
+**Functions and Responsibilities of the Application Layer:**
+
+1. **User Interface**: The Application Layer provides a user-friendly interface for accessing network services and resources. It includes various applications and protocols that users interact with directly, such as web browsers, email clients, and file transfer programs.
+
+2. **Data Representation and Encoding**: This layer is responsible for converting data into a format that can be transmitted over the network. It handles tasks such as data encryption, compression, and formatting to ensure compatibility between different systems and applications.
+
+3. **Protocol Support**: The Application Layer supports various communication protocols that facilitate specific network services and applications. These protocols define rules and standards for communication, ensuring interoperability between different devices and software applications.
+
+4. **Resource Sharing**: The Application Layer enables resource sharing and collaboration among users and devices on the network. It includes protocols such as file transfer protocols (FTP), network file system (NFS), and print services (e.g., LPD) for sharing files, printers, and other resources across the network.
+
+5. **Remote Access and Management**: The Application Layer allows users to remotely access and manage network resources and devices. Protocols such as Telnet and SSH provide secure remote login and command execution capabilities, while SNMP (Simple Network Management Protocol) enables centralized management and monitoring of network devices.
+
+6. **Email and Messaging**: Email protocols such as SMTP (Simple Mail Transfer Protocol) and POP3/IMAP (Post Office Protocol version 3/Internet Message Access Protocol) operate at the Application Layer, facilitating the exchange of electronic messages between users and mail servers.
+
+7. **Web Services and Browsing**: The Application Layer supports web browsing and services through protocols such as HTTP (Hypertext Transfer Protocol) and HTTPS (HTTP Secure), allowing users to access and interact with web pages, online resources, and web-based applications.
+
+8. **Domain Name Resolution**: DNS (Domain Name System) operates at the Application Layer and translates human-readable domain names into IP addresses, enabling users to access websites and services using domain names instead of IP addresses.
+
+Overall, the Application Layer plays a crucial role in enabling communication, collaboration, and resource sharing among users and applications across networks. It abstracts the complexities of lower-level protocols and network communication, providing a seamless and user-friendly experience for accessing network services and resources.
+
+![alt text](image-14.png)
+
+---
+### 2. Explain the primary functions of the Application Layer in the OSI model. Discuss the role of protocols in the Application Layer and provide examples of commonly used application layer protocols.
+
+**Refer Above Answer!!**
+
+**Role of Protocols in the Application Layer:**
+
+1. **Facilitating Communication**: Application Layer protocols enable communication between software applications running on different devices across the network. They define how data is formatted, transmitted, and interpreted, ensuring that both the sender and receiver can understand each other's messages.
+
+2. **Providing Network Services**: Application Layer protocols provide a wide range of network services to end-users and applications. These services include file transfer, email communication, web browsing, remote access, resource sharing, and domain name resolution, among others.
+
+3. **Ensuring Interoperability**: Protocols at the Application Layer define standardized methods for data exchange, ensuring interoperability between different software applications and platforms. This allows users to communicate and share resources seamlessly, regardless of the underlying hardware or operating systems.
+
+4. **Supporting Higher-Level Functions**: Application Layer protocols support higher-level functions such as data encryption, compression, authentication, and error handling. These functions enhance the security, reliability, and efficiency of network communication and data exchange.
+
+**Examples of Commonly Used Application Layer Protocols:**
+
+1. **Hypertext Transfer Protocol (HTTP)**: HTTP is the protocol used for transmitting and accessing web pages and resources on the World Wide Web. It defines how web browsers and web servers communicate, allowing users to browse and interact with websites.
+
+2. **Simple Mail Transfer Protocol (SMTP)**: SMTP is used for sending and routing email messages between mail servers. It defines how email clients and mail servers communicate to send, receive, and relay email messages over the internet.
+
+3. **Post Office Protocol version 3 (POP3)** and **Internet Message Access Protocol (IMAP)**: POP3 and IMAP are email retrieval protocols used by email clients to retrieve email messages from mail servers. They allow users to access their email messages and manage their mailboxes.
+
+4. **File Transfer Protocol (FTP)**: FTP is used for transferring files between a client and a server on a network. It provides a simple and efficient way to upload, download, and manage files stored on remote servers.
+
+5. **Domain Name System (DNS)**: DNS translates domain names into IP addresses and vice versa, enabling users to access websites and services using human-readable domain names. It resolves domain names to their corresponding IP addresses, facilitating communication over the internet.
+
+6. **Secure Shell (SSH)**: SSH provides secure remote access and command execution capabilities over a network. It encrypts data transmissions between a client and a server, ensuring confidentiality and integrity of the communication.
+
+7. **Simple Network Management Protocol (SNMP)**: SNMP is used for managing and monitoring network devices and systems. It allows network administrators to collect and analyze data from network devices, monitor performance, and troubleshoot network issues.
+
+---
+### 3. Explain the primary functions of the Transport Layer in the OSI model Discuss the differences between the Transmission Control Protocol (TCP) and the User Datagram Protocol (UDP) in terms of their rehabilitee, flow control, and error detection mechanisms. Provide examples of scenarios where each protocol is commonly used.
+
+The Transport Layer in the OSI model is responsible for ensuring reliable and efficient end-to-end communication between processes running on different hosts. Its primary functions include:
+
+1. **Segmentation and Reassembly**: The Transport Layer breaks down data from the higher layers into smaller units called segments for transmission over the network. It also reassembles these segments at the receiving end to reconstruct the original data.
+
+2. **Reliable Data Delivery**: It ensures reliable data delivery by implementing mechanisms for error detection, error correction, and retransmission of lost or corrupted segments. This is crucial for applications that require guaranteed delivery of data, such as file transfer and email.
+
+3. **Flow Control**: The Transport Layer regulates the flow of data between sender and receiver to prevent congestion and ensure optimal utilization of network resources. It employs techniques like sliding window flow control to manage the rate of data transmission.
+
+4. **Connection Establishment and Termination**: In connection-oriented protocols like TCP, the Transport Layer establishes a connection between the communicating hosts before data transfer begins and terminates the connection after the transfer is complete. This ensures orderly and reliable communication.
+
+Now, let's discuss the differences between TCP and UDP in terms of reliability, flow control, and error detection mechanisms:
+| Aspect          | TCP                                                                                                                                                  | UDP                                                                                                                                                             |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Reliability     | Provides reliable, connection-oriented communication. Guarantees data delivery in correct order with acknowledgment and retransmission mechanisms.   | Connectionless and does not provide reliability mechanisms. Simply sends data without ensuring delivery, making it faster but less reliable.                    |
+| Flow Control    | Implements sophisticated flow control mechanisms to prevent sender from overwhelming receiver. Adjusts transmission rate based on receiver feedback. | Does not include flow control mechanisms. Relies on application to manage data transmission rate, leading to congestion and packet loss in high-load scenarios. |
+| Error Detection | Incorporates robust error detection mechanisms, including checksums and sequence numbers, for error recovery.                                        | Includes simple checksum mechanism for error detection but does not provide error recovery. Any errors detected are reported to application for handling.       |
+
+Examples of scenarios where each protocol is commonly used:
+
+**TCP:**
+  - Web browsing: TCP is used for transferring HTML pages, images, and other web content reliably.
+  - Email: SMTP (Simple Mail Transfer Protocol) and IMAP (Internet Message Access Protocol) use TCP for sending and receiving emails.
+  - File transfer: FTP (File Transfer Protocol) and SFTP (SSH File Transfer Protocol) utilize TCP for reliable file transfer over the network.
+
+**UDP:**
+  - Real-time multimedia streaming: UDP is commonly used for streaming audio and video content, where real-time delivery is prioritized over reliability.
+  - Online gaming: Many online games use UDP for low-latency communication between game clients and servers, prioritizing speed over reliability.
+  - DNS (Domain Name System): DNS queries and responses are often transmitted over UDP due to the lightweight nature of UDP packets and the real-time nature of DNS lookups.
+
+---
+### 4.Explain the key responsibilities of the Transport Layer in the OSI model. Discuss the differences between connection-oriented and connectionless communication in the Transport Layer, highlighting the advantages and disadvantages of each approach. Provide examples of protocols that use each type of communication.
+The Transport Layer in the OSI model is responsible for ensuring reliable end-to-end communication between hosts. Its key responsibilities include:
+
+1. **Segmentation and Reassembly**: The Transport Layer divides data received from the Session Layer into smaller units called segments before transmission. It reassembles these segments at the destination to reconstruct the original data.
+
+2. **Flow Control**: It manages the flow of data between sender and receiver to prevent overwhelming the receiver with data. Flow control mechanisms regulate the rate of data transmission, ensuring efficient and reliable communication.
+
+3. **Error Control**: The Transport Layer detects and corrects errors that may occur during data transmission. It uses techniques such as checksums and acknowledgments to ensure data integrity and reliability.
+
+4. **Multiplexing and Demultiplexing**: Multiplexing allows multiple applications running on a host to share the network connection. Demultiplexing ensures that each application receives the data intended for it at the destination.
+
+5. **Connection Establishment and Termination**: For connection-oriented communication, the Transport Layer establishes, maintains, and terminates connections between hosts. This ensures reliable and ordered delivery of data.
+
+Now, let's discuss the differences between connection-oriented and connectionless communication:
+
+| Aspect                | Connection-Oriented Communication                                         | Connectionless Communication                             |
+| --------------------- | ------------------------------------------------------------------------- | -------------------------------------------------------- |
+| **Advantages**        | - Reliability: Ensures correct order and error-free data delivery.        | - Efficiency: Lower latency due to reduced overhead.     |
+|                       | - Flow Control: Efficient management of data flow.                        | - Scalability: Suitable for lightweight communication.   |
+|                       | - Error Recovery: Mechanisms for error detection and correction.          |                                                          |
+| **Disadvantages**     | - Overhead: Additional overhead for connection setup and maintenance.     | - Lack of Reliability: Does not guarantee data delivery. |
+|                       | - Complexity: Connection setup process introduces complexity and latency. | - Limited Error Handling: Minimal error detection.       |
+| **Example Protocols** | TCP (Transmission Control Protocol)                                       | UDP (User Datagram Protocol)                             |
+
+In summary, the Transport Layer in the OSI model plays a crucial role in ensuring reliable communication between hosts by managing segmentation, flow control, error control, multiplexing, and connection establishment. The choice between connection-oriented and connectionless communication depends on the specific requirements of the application, with each approach offering distinct advantages and disadvantages.
+
+---
+### 5. Explain the client-server model in the context of the Application Layer. Discuss the roles of clients and servers in application communication and provide examples of applications that follow this model.
+
+The client-server model is a fundamental architecture in networking where applications are designed to function either as clients or servers, facilitating communication and resource sharing over a network. In the context of the Application Layer of the OSI model, this model defines the roles of client and server applications in communication:
+
+1. **Client**: The client is an application or system that initiates communication by requesting services or resources from a server. It typically sends requests to servers and awaits responses. Clients are responsible for initiating communication sessions, sending data, and processing responses received from servers. They rely on servers to provide the requested services or data.
+
+2. **Server**: The server is an application or system that provides services or resources to clients in response to their requests. Servers are designed to listen for incoming requests from clients, process these requests, and send back appropriate responses. They are responsible for hosting and managing resources or services that clients need access to.
+
+In this model, communication follows a request-response paradigm, where clients initiate communication by sending requests to servers, and servers respond to these requests with the necessary data or services. The client-server model allows for scalable and efficient distribution of resources and services across a network.
+
+Examples of applications that follow the client-server model include:
+
+1. **Web Browsers (Client) and Web Servers (Server)**: When a user accesses a website through a web browser (client), it sends a request to the web server hosting the site. The web server processes the request, retrieves the requested web pages or resources, and sends them back to the browser as a response.
+
+2. **Email Clients (Client) and Mail Servers (Server)**: Email clients such as Outlook or Gmail act as clients, sending requests to mail servers to send, receive, or manage emails. Mail servers, on the other hand, host and manage email accounts, storing incoming emails and delivering outgoing ones.
+
+3. **File Transfer Protocol (FTP) Clients (Client) and FTP Servers (Server)**: FTP clients initiate file transfer requests to FTP servers to upload, download, or manage files stored on remote servers. FTP servers host files and directories, allowing clients to access and manipulate them over the network.
+
+4. **Database Clients (Client) and Database Servers (Server)**: Database clients, such as SQL clients, interact with database servers to query, insert, update, or delete data stored in databases. Database servers manage and store the data, processing requests from clients and returning query results.
+
+These examples illustrate how the client-server model is pervasive in various networked applications, enabling efficient communication and resource sharing between clients and servers.
+
+---
+### 6. Define the Application Layer in the OSI model and discuss its primary functions.
+
+![alt text](image-15.png)
+
+**Refer 5 Marks Q.1 for Primary Functions**
+
+---
+### 7. Describe the process of error detection and correction in the Transport Layer. Discuss the significance of techniques such as checksum and acknowledgment in ensuring data integrity and reliability.
+Error detection and correction in the Transport Layer are crucial processes that ensure the integrity and reliability of data transmission over a network. These processes involve the use of techniques such as checksums and acknowledgments to detect and correct errors that may occur during data transmission. Here's an overview of each process and the significance of these techniques:
+
+1. **Error Detection:**
+   - Error detection involves identifying whether errors have occurred during data transmission. One common technique used for error detection is the checksum.
+   - Checksum: A checksum is a value calculated from the data being transmitted. It is generated by performing a mathematical operation (such as addition or cyclic redundancy check) on the data bits. The sender includes the checksum in the transmitted data.
+   - At the receiving end, the receiver recalculates the checksum using the received data. If the calculated checksum matches the received checksum, it indicates that the data has been transmitted without errors. However, if the checksums do not match, it signals the presence of errors in the transmitted data.
+
+<img src="image-16.png" alt="alt text" width="400">
+
+2. **Error Correction:**
+   - Error correction involves identifying and correcting errors in the transmitted data. While error detection techniques like checksums can identify errors, they do not correct them. Error correction mechanisms are essential for ensuring data reliability in scenarios where errors are detected.
+   - Error correction techniques typically involve retransmitting the erroneous data or using error-correcting codes (ECC) to reconstruct the original data at the receiver.
+   - Retransmission: In this method, the receiver detects errors and requests the sender to retransmit the corrupted data. The sender resends the data until it is received correctly at the receiver's end.
+   - Error-Correcting Codes (ECC): ECC techniques add redundant information to the transmitted data, allowing the receiver to detect and correct errors without the need for retransmission. Examples include Hamming codes and Reed-Solomon codes.
+
+3. **Significance of Techniques:**
+   - Checksums: Checksums play a vital role in error detection by providing a simple and efficient means of verifying data integrity. They help ensure that data transmitted over a network is free from errors, thus enhancing reliability.
+   - Acknowledgments: Acknowledgments are messages sent by the receiver to confirm the successful receipt of data packets. They allow the sender to know whether the transmitted data was received correctly or if retransmission is necessary, thereby facilitating error correction and ensuring reliable communication.
+
+In summary, error detection and correction techniques such as checksums and acknowledgments are essential for maintaining data integrity and reliability in the Transport Layer. They help identify errors during transmission, facilitate error correction, and ensure that data is delivered accurately and securely across networks.
+---
