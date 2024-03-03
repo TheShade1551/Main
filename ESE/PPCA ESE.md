@@ -1271,7 +1271,7 @@ for product_name, details in order_summary.items():
 # Process payment
 payment_result = process_payment(order_summary)
 print(payment_result)
-```
+``` from-import statements in Python
 ---
 ### 4. How can a Python module or package be exported for use in other programs or by other developers? Provide an example of how to export a module or package and explain how it can be imported by another program. 
 
@@ -2625,3 +2625,6 @@ In this simplified version:
 - The labels are removed to focus on the layout demonstration.
 - Buttons are directly added to each frame without specifying row or column numbers for Grid Layout.
 - The program is still demonstrating the basic concepts of Pack, Grid, and Place layouts.
+
+
+
